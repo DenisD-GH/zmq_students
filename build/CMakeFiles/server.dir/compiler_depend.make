@@ -34,6 +34,7 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
@@ -118,6 +119,7 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/fstream \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
@@ -257,8 +259,10 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -317,6 +321,10 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
+
 /usr/include/c++/13/istream:
 
 /usr/include/c++/13/bits/uses_allocator.h:
@@ -344,6 +352,8 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 /usr/include/c++/13/ctime:
 
 /usr/include/c++/13/cstdio:
+
+/usr/include/c++/13/fstream:
 
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
@@ -382,14 +392,6 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/c++/13/bits/streambuf.tcc:
-
-/usr/include/c++/13/memory:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
 
 /usr/include/c++/13/bits/new_allocator.h:
 
@@ -439,10 +441,6 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
-/usr/include/c++/13/bits/refwrap.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
 /usr/include/c++/13/bits/range_access.h:
 
 /usr/include/c++/13/compare:
@@ -454,6 +452,8 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 /usr/include/c++/13/bits/string_view.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/c++/13/bits/quoted_string.h:
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
@@ -539,6 +539,12 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 
 /usr/include/c++/13/bit:
 
+/usr/include/c++/13/bits/refwrap.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/include/c++/13/bits/fstream.tcc:
+
 /usr/include/c++/13/bits/ptr_traits.h:
 
 /mnt/windows/Materials/Projects/TestTasks/zmq_students/server/main.cpp:
@@ -589,6 +595,8 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 
 /usr/include/c++/13/bits/cxxabi_init_exception.h:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h:
+
 /usr/include/c++/13/typeinfo:
 
 /usr/include/c++/13/bits/exception.h:
@@ -614,8 +622,6 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 /usr/include/c++/13/bits/ios_base.h:
 
 /usr/include/c++/13/bits/ostream.tcc:
-
-/usr/include/c++/13/bits/quoted_string.h:
 
 /usr/include/c++/13/bits/uniform_int_dist.h:
 
@@ -647,6 +653,12 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 
 /usr/include/c++/13/bits/locale_facets_nonio.tcc:
 
+/usr/include/c++/13/memory:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
 /usr/include/c++/13/exception:
 
 /usr/include/c++/13/pstl/glue_memory_defs.h:
@@ -654,6 +666,10 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/c++/13/pstl/pstl_config.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
 
@@ -838,7 +854,3 @@ CMakeFiles/server.dir/server/main.cpp.o: /mnt/windows/Materials/Projects/TestTas
 /usr/include/c++/13/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h:
