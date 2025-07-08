@@ -2,35 +2,69 @@
 #include <iostream>
 #include <chrono>    // Для работы со временем
 #include <thread>    // Для работы с потоками
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <string>
+
+// Данные о студенте
+struct Student {
+    int id;                 // ИД студента
+    std::string firstName;  // Имя студента
+    std::string lastName;   // Фамилия студента
+    std::string birthDate;  // Дата рождения
+};
+
+// Функция для чтения студентов из файла
+std::vector<Student> readStudentsFromFile(const std::string& filename) {
+    std::vector<Student> students;  // Пустой вектор для студентов
+    std::ifstream file(filename);   // Открываем файл для чтения
+    
+    // Проверка успешности открытия
+    if (!file.is_open()) {
+        std::cerr << "Ошибка открытия файла: " << filename << std::endl;
+        return students;  // Пустой вектор
+    }
+
+    std::string line;  // Строка из файла
+    // Чтение файла построчно
+    while (std::getline(file, line)) {
+        std::istringstream iss(line);
+        Student s;
+        
+        // Парсинг строки
+        if (iss >> s.id >> s.firstName >> s.lastName >> s.birthDate) {
+            students.push_back(s);  // Добавление студента
+        } else {
+            std::cerr << "Ошибка парсинга строки: " << line << std::endl;
+        }
+    }
+    
+    return students;
+}
 
 int main() {
-    // Создание контекста ZeroMQ
+    std::vector<Student> students = readStudentsFromFile("../data/student_file_1.txt");
+    
+    std::cout << "Прочитано студентов: " << students.size() << std::endl;
+    
+    // Данные студентов для проверки
+    std::cout << "\nСписок студентов:\n";
+    for (const auto& student : students) {
+        std::cout << "ID: " << student.id 
+                  << ", Имя: " << student.firstName
+                  << ", Фамилия: " << student.lastName
+                  << ", Дата рождения: " << student.birthDate
+                  << std::endl;
+    }
+
+    /*
     zmq::context_t context(1);
-    
-    // Создание сокета PUB
     zmq::socket_t socket(context, ZMQ_PUB);
-    
-    // Слушает порт для подключений
     socket.bind("tcp://*:5555");
     std::cout << "Сервер запущен на порту 5555\n";
-
-    // Время клиентам подключиться перед отправкой
-    std::cout << "Ожидание подключения клиентов...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    
-    // Подготовка и отправка сообщения
-    std::string message = "Hello from ZMQ Server!";
-    zmq::message_t zmq_message(message.size()); // Контейнер, без которого не получится отправить данные
-    memcpy(zmq_message.data(), message.data(), message.size());
-    
-    // Отправка сообщения
-    socket.send(zmq_message, zmq::send_flags::none);
-    std::cout << "Сообщение отправлено: " << message << "\n";
-    
-    // 3 секунды чтобы клиент успел получить
-    std::cout << "Ожидание получения клиентом...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(3));
-    std::cout << "Сервер завершает работу.\n";
+    ...
+    */
     
     return 0;
 }
