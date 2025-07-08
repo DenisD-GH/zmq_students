@@ -1,0 +1,4 @@
+/mnt/windows/Materials/Projects/TestTasks/zmq_students/build/CMakeFiles/server.dir
+/mnt/windows/Materials/Projects/TestTasks/zmq_students/build/CMakeFiles/client.dir
+/mnt/windows/Materials/Projects/TestTasks/zmq_students/build/CMakeFiles/edit_cache.dir
+/mnt/windows/Materials/Projects/TestTasks/zmq_students/build/CMakeFiles/rebuild_cache.dir
