@@ -217,6 +217,4 @@ CMakeFiles/client.dir/client/main.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h /usr/include/c++/13/optional \
  /usr/include/c++/13/bits/enable_special_members.h \
- /usr/include/c++/13/iostream /usr/include/c++/13/thread \
- /usr/include/c++/13/bits/std_thread.h \
- /usr/include/c++/13/bits/this_thread_sleep.h
+ /usr/include/c++/13/iostream
